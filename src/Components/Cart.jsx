@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { mycontext } from '../App';
+import { FloatButton } from 'antd';
 
 
 const Cart = () => 
@@ -38,7 +39,9 @@ const Cart = () =>
                                         <div className='d-flex justify-content-between align-items-center'>
                                             <p className="card-text">Brand : {e.brand}</p>
                                             <p className="card-text text-success ">Discount Offer : {e.discountPercentage}%</p>
+                                            <button style={{color:'red'}}>REMOVE</button>
                                         </div>
+
                                         <p className="card-text">{e.description}</p>
                                         <p className="card-text">Rating : {e.rating}/5</p>
                                         <div className='d-flex justify-content-between align-items-center'>
@@ -49,6 +52,9 @@ const Cart = () =>
                                                 <button type="button" className='btn btn-outline-success' style={{ marginLeft: '8px' }} onClick={() => { addQuantity() }}> + </button>
                                             </div>
                                         </div>
+                                
+        
+                                        
                                         </div>
                                         <hr />
                                         <div className="bottom">
